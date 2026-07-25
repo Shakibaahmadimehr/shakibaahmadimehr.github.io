@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakiba Ahmadimehr | Portfolio</title>
+    
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==================== GLOBAL STYLES ==================== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8f5;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 4rem 1.5rem;
+        }
+
+        /* ==================== TOP NAVIGATION BAR ==================== */
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;                     
+            background-color: #ffffff;
+            padding: 14px 40px;            
+            border-radius: 50px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 10px;
+            z-index: 999;
+            width: 100%;                   
+            flex-wrap: wrap;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #1e293b;                
+            font-weight: 700;              
+            font-size: 15px;               
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            color: #2563eb;
+            background-color: #eff6ff;     
+        }
+
+        /* ==================== SECTION ANCHORS & TITLES ==================== */
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            color: #0f172a;
+            font-size: 32px;
+            font-weight: 800;
+            margin-top: 40px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+
+        /* ==================== BIOGRAPHY SECTION ==================== */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .profile-img-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-img-container img {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 220px;
+            height: 220px;
+            border: 4px solid #ffffff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            color: #2563eb;
+            background-color: #eff6ff;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 1px solid #bfdbfe;
+            transition: all 0.2s ease;
+            font-size: 18px;
+        }
+
+        .social-icons a:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0px 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        /* ==================== CARDS & SKILLS GRID ==================== */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 20px;
+            width: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            text-align: center;
+            padding: 24px 16px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-icon {
+            font-size: 36px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .skill-title {
+            color: #0f172a;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .skill-desc {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 6px;
+            margin-top: 8px;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn-link {
+            display: block;
+            width: 100%;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-link:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* ==================== PHOTO GALLERIES (POPOVER REPLACEMENT) ==================== */
+        details summary {
+            cursor: pointer;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #1e293b;
+            list-style: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        details summary:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Responsive Layout for Mobile */
+        @media (max-width: 768px) {
+            .bio-grid, .skills-grid, .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .top-nav {
+                gap: 12px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- 3. TOP NAVIGATION BAR -->
+        <div class="top-nav">
+            <a href="#biography">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+<!-- ==================== BIOGRAPHY SECTION ==================== -->
+<div id="biography" class="section-anchor"></div>
+<div class="bio-grid">
+    <div style="text-align: center;">
+        <div class="profile-img-container">
+            <img src="new.jpg" alt="Shakiba Ahmadimehr">
+        </div>
+        <h2 style="margin: 0; color: #0f172a; font-size: 22px; font-weight: 700;">Shakiba Ahmadimehr</h2>
+        <p style="color: #64748b; font-size: 14px; margin-top: 4px; margin-bottom: 16px; font-weight: 500;">
+            Biomedical Engineer & Data Analyst
+        </p>
+        
+        <!-- Social & CV Links -->
+        <div class="social-icons">
+            <!-- Email Icon: Scrolls down to the Contact Form -->
+            <a href="#contact" 
+               onclick="scrollToContact(); return false;" 
+               title="Send Message">
+               <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/shakiba-ahmadimehr-b733a7422/" 
+               onclick="handleSafeClick(event, 'https://www.linkedin.com/in/shakiba-ahmadimehr-b733a7422/')" 
+               title="LinkedIn">
+               <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Shakibaahmadimehr" 
+               onclick="handleSafeClick(event, 'https://github.com/Shakibaahmadimehr')" 
+               title="GitHub">
+               <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- CV -->
+            <a href="cv.pdf" 
+               onclick="handleSafeClick(event, 'cv.pdf')" 
+               title="Request CV" 
+               style="font-weight: 800; font-size: 14px;">CV</a>
+        </div>
+    </div>
+
+    <div>
+        <h1 style="color: #0f172a; font-size: 32px; font-weight: 700; margin-bottom: 18px; margin-top: 0;">Biography</h1>
+        <p style="color: #334155; font-size: 17px; line-height: 1.7; margin-bottom: 16px;">
+            I am a <b>Biomedical Engineer & Data Analyst</b> specializing in 
+            <span style="color: #2563eb; font-weight: 600;">neuroimaging analysis</span>, brain data analytics, and 
+            <span style="color: #2563eb; font-weight: 600;">machine learning</span>.
+        </p>
+        <p style="color: #334155; font-size: 17px; line-height: 1.7; margin-bottom: 16px;">
+            My work focuses on uncovering functional and structural brain patterns through 
+            advanced quantitative models, fMRI signal modeling, and machine learning pipelines.
+        </p>
+        <p style="color: #334155; font-size: 17px; line-height: 1.7; margin-bottom: 0;">
+            Outside the IDE, you'll usually find me baking artisan sourdough bread 🍞 or out exploring nature during golden-hour walks 🌅.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+        <!-- 5. SKILLS SECTION -->
+        <div id="skills" class="section-anchor"></div>
+        <div class="section-title">Skills</div>
+        <div class="section-subtitle">Technical competencies and methodologies</div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <div class="skill-title">Programming</div>
+                <div class="skill-desc">Python, MATLAB, Bash, Command line, Git</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🧠</div>
+                <div class="skill-title">NeuroImaging Analysis</div>
+                <div class="skill-desc">fMRI, DTI, Network Analysis, Brain Connectivity, Time Series, Surface Analysis</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📈</div>
+                <div class="skill-title">Statistics & ML</div>
+                <div class="skill-desc">Linear Models, Mixed Models, Prediction, Classification</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🛠️</div>
+                <div class="skill-title">Frameworks & Tools</div>
+                <div class="skill-desc">PyTorch, NumPy, Pandas, Scikit-Learn, Streamlit, Jupyter, MRtrix, FSL, FreeSurfer, BIDS</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🤝</div>
+                <div class="skill-title">Leadership</div>
+                <div class="skill-desc">Lead Projects, Delegate Tasks, Effective Communication, Research Methodologies</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🌐</div>
+                <div class="skill-title">Language</div>
+                <div class="skill-desc">English, Persian </div>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- 6. EXPERIENCE SECTION -->
+<div id="experience" class="section-anchor"></div>
+<div class="section-title">Work & Research Experience</div>
+
+<!-- 1. Graduate Researcher - Sanger Lab (Sep 2024 – Jun 2025) -->
+<div class="card" style="margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Graduate Researcher</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Sep 2024 – Jun 2025</span>
+    </div>
+    <p style="color: #2563eb; font-weight: 600; margin-top: 6px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+        <img src="uci_logo.png" alt="UC Irvine Logo" style="height: 20px; width: auto; object-fit: contain;">
+        Sanger Lab (Prof. Terence David Sanger) • UC Irvine
+    </p>
+    <ul style="color: #334155; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 16px;">
+        <li>Neuroimaging & Tractography: Processed structural MRI/DTI datasets, utilizing FreeSurfer to parcellate cortical and subcortical regions and mapping contralateral fiber connections between targeted brain areas using MRtrix.</li>
+    </ul>
+    <div>
+        <span class="tag">MRI & DTI</span><span class="tag">CNN</span><span class="tag">LFP Data</span><span class="tag">Time-Series Classification</span><span class="tag">Neuroimaging</span>
+    </div>
+</div>
+
+<!-- 2. Teaching Assistant - UCI (Oct 2024 – Jun 2025) -->
+<div class="card" style="margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Teaching Assistant</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Oct 2024 – Jun 2025</span>
+    </div>
+    <p style="color: #2563eb; font-weight: 600; margin-top: 6px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+        <img src="uci_logo.png" alt="UC Irvine Logo" style="height: 20px; width: auto; object-fit: contain;">
+        UCI Samueli School of Engineering • Full-time
+    </p>
+    <ul style="color: #334155; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 16px;">
+        <li>Graded assignments and provided detailed, constructive feedback to support students' academic growth and enhance learning outcomes.</li>
+    </ul>
+    <div>
+        <span class="tag">Grading & Assessment</span><span class="tag">Engineering Education</span><span class="tag">Feedback & Evaluation</span>
+    </div>
+</div>
+
+<!-- 3. Graduate Research Fellow - BME / VPNL Lab (Sep 2023 – Sep 2024) -->
+<div class="card" style="margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Graduate Research Fellow</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Sep 2023 – Sep 2024</span>
+    </div>
+    <p style="color: #2563eb; font-weight: 600; margin-top: 6px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+        <img src="uci_logo.png" alt="UC Irvine Logo" style="height: 20px; width: auto; object-fit: contain;">
+        Biomedical Engineering Department • UC Irvine
+    </p>
+    <ul style="color: #334155; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 16px;">
+        <li>Received a 1-year Fellowship from the BME Department as a first-year Ph.D. student to conduct lab rotations across multiple research units.</li>
+        <li>Completed my primary lab rotation in the Visual Perception & Neuroimaging Lab (VPNL) under the supervision of Prof. Emily Grossman, focusing on human subject fMRI methodologies.</li>
+    </ul>
+    <div>
+        <span class="tag">BME Ph.D. Fellowship</span><span class="tag">Lab Rotations</span><span class="tag">Human fMRI</span><span class="tag">Signal Preprocessing</span><span class="tag">Pattern Classification</span>
+    </div>
+</div>
+
+<!-- 4. Research Assistant - Tulane University (Aug 2022 – May 2023) -->
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Research Assistant</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Aug 2022 – May 2023</span>
+    </div>
+    <p style="color: #2563eb; font-weight: 600; margin-top: 6px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+        <img src="tulane_logo.png" alt="Tulane University Logo" style="height: 20px; width: auto; object-fit: contain;">
+        Multiscale Bioimaging & Bioinformatics (MBB) Lab • Tulane University
+    </p>
+    <ul style="color: #334155; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 16px;">
+        <li>Conducting research under the supervision of Prof. Yu-Ping Wang.</li>
+        <li>Designed and developed machine learning and deep learning models to classify different types of fMRI time-series data.</li>
+    </ul>
+    <div>
+        <span class="tag">Deep Learning</span><span class="tag">Machine Learning</span><span class="tag">fMRI</span><span class="tag">Time-Series</span>
+    </div>
+</div>
+
+<hr>
+
+        <!-- 7. PROJECTS SECTION -->
+        <div id="projects" class="section-anchor"></div>
+        <div class="section-title">Projects</div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">Structural Connectivity Analysis</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 10px;">Diffusion Tensor Imaging (DTI) & Graph Theory</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Quantified structural brain networks using DTI pipelines to analyze topological organization and network connectivity metrics.</p>
+            <div><span class="tag">DTI</span><span class="tag">Graph Theory</span><span class="tag">Python</span></div>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">Unsupervised Pattern Discovery</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 10px;">Unsupervised Machine Learning & fMRI</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Applied clustering and unsupervised latent variable learning to discover hidden functional brain states across diverse fMRI datasets.</p>
+            <div><span class="tag">fMRI</span><span class="tag">Clustering</span><span class="tag">Scikit-Learn</span></div>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">fMRI Signal Modeling & Brain Decoding</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 10px;">Finite Impulse Response (FIR) & Classification</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Reconstructed fMRI time-series dynamics using FIR modeling and classified cognitive states (cued vs. uncued tasks) using supervised classifiers.</p>
+            <div><span class="tag">FIR Modeling</span><span class="tag">Classification</span><span class="tag">Time-Series</span></div>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">Evaluation of Brain Connectivity in Parkinson's Disease</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 10px;">Master's Thesis Research | Resting-State fMRI</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Investigated functional connectivity (extracted as networks via Independent Component Analysis) and effective connectivity using time-series data mapped to the AAL atlas.</p>
+            <div><span class="tag">ICA & GCA</span><span class="tag">Transfer Entropy</span><span class="tag">Graph Theory</span><span class="tag">fMRI</span></div>
+        </div>
+
+        <hr>
+
+        <!-- 8. PUBLICATIONS SECTION -->
+        <div id="publications" class="section-anchor"></div>
+        <div class="section-title">Publications & Articles</div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">Investigation of linear & non-linear connectivity</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Research Paper & Preprint</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Comparative analysis of linear and non-linear functional connectivity estimation methods in neuroimaging signals.</p>
+            <a href="https://assets-eu.researchsquare.com/files/rs-2331611/v1/6700104e-e2a9-4d93-ae9a-19ac7a5f5435.pdf" target="_blank" class="btn-link">📄 Read Linear & Non-Linear Connectivity Paper (PDF)</a>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">Alteration of resting-state brain networks in Parkinson's disease</h3>
+            <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Multi-aspect study of functional and effective connectivity</p>
+            <p style="color: #334155; font-size: 15px; line-height: 1.6;">Comprehensive evaluation of resting-state network alterations combining multi-aspect connectivity models in Parkinson's disease.</p>
+            <a href="https://www.researchgate.net/publication/365878345_Alteration_of_the_resting-state_brain_networks_a_multi-aspect_study_of_functional_and_effective_connectivity_in_Parkinson's_disease/fulltext/64196c4292cfd54f8418a9cb/Alteration-of-the-resting-state-brain-networks-a-multi-aspect-study-of-functional-and-effective-connectivity-in-Parkinsons-disease.pdf" target="_blank" class="btn-link">📄 Read Parkinson's Disease Brain Networks Study (PDF)</a>
+        </div>
+
+        <hr>
+
+<!-- 9. EDUCATION SECTION -->
+<div id="education" class="section-anchor"></div>
+<div class="section-title">Education</div>
+
+<!-- 1. Ph.D. Student / Graduate Studies (Sep 2023 – Jun 2025) -->
+<div class="card" style="margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Ph.D. Student in Biomedical Engineering</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Sep 2023 – Jun 2025</span>
+    </div>
+    <p style="color: #2563eb; font-weight: 600; margin-top: 6px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+        <img src="uci_logo.png" alt="UC Irvine Logo" style="height: 20px; width: auto; object-fit: contain;">
+        University of California, Irvine
+    </p>
+    <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 0;">Completed doctoral-level coursework and research rotations focusing on neuroimaging and machine learning models.</p>
+</div>
+
+<!-- 2. Master of Science (Sep 2019 – Jan 2022) -->
+<div class="card" style="margin-bottom: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Master of Science (M.Sc.) in Biomedical Engineering</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Sep 2019 – Jan 2022</span>
+    </div>
+    <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-top: 6px; margin-bottom: 8px;">Specialization: Neuroimaging, Brain Decoding & Machine Learning</p>
+    <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 0;">Focused on computational modeling of brain data, advanced signal analytics, and machine learning techniques applied to medical diagnostics.</p>
+</div>
+
+<!-- 3. Bachelor of Engineering (Sep 2015 – Feb 2019) -->
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: #0f172a; margin: 0; font-size: 19px; font-weight: 700;">Bachelor of Engineering (B.E.) in Biomedical Engineering</h3>
+        <span style="color: #64748b; font-size: 13px; font-weight: 600; background-color: #f1f5f9; padding: 4px 10px; border-radius: 12px;">Sep 2015 – Feb 2019</span>
+    </div>
+    <p style="color: #2563eb; font-size: 14px; font-weight: 600; margin-top: 6px; margin-bottom: 8px;">Core Engineering & Systems Foundations</p>
+    <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 0;">Coursework in biomedical instrumentation, signals and systems, bio-statistics, and foundational programming.</p>
+</div>
+
+<hr>
+
+        <!-- 10. LIFE & HOBBIES SECTION -->
+        <div id="hobbies" class="section-anchor"></div>
+        <div class="section-title">Life & Hobbies 🍞🌅</div>
+        <div class="section-subtitle">A glimpse into home baking, sourdough loaves, and nature</div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">🍞 Artisan Sourdough Baking</h3>
+            <p style="color: #2563eb; font-weight: 600; font-size: 12px; margin-bottom: 8px;">FERMENTATION & FLAVOR EXPERIMENTS</p>
+            <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 0;">
+                Passionate about crafting high-hydration slow cold-fermented sourdough, featuring both traditional artisan loaves and custom creations like blueberry lemon sourdough.
+            </p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 4px; font-size: 17px; font-weight: 700;">🍞 Traditional Artisan Sourdough</h4>
+                <p style="color: #2563eb; font-size: 12px; font-weight: 600; margin-bottom: 10px;">CLASSIC FERMENTATION</p>
+                <p style="color: #475569; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    A high-hydration, 24-hour slow cold fermentation yields a blistered golden crust, deep tangy flavor, and light, airy crumb structure.
+                </p>
+                <p style="color: #0f172a; font-weight: 700; font-size: 14px; margin-bottom: 8px;">Ingredients & Ratios</p>
+                <ul style="color: #334155; font-size: 13px; line-height: 1.6; padding-left: 18px; margin-bottom: 15px;">
+                    <li><b>Bread Flour:</b> 800g</li>
+                    <li><b>Water:</b> 540g–560g (~68–70% hydration)</li>
+                    <li><b>Active Starter:</b> 160g</li>
+                    <li><b>Salt:</b> 16g</li>
+                </ul>
+
+                <details>
+                    <summary>📷 View Traditional Loaf Photos</summary>
+                    <div class="gallery-grid">
+                        <img src="bread1.jpg" alt="Traditional Sourdough 1">
+                        <img src="bread2.jpg" alt="Traditional Sourdough 2">
+                    </div>
+                </details>
+            </div>
+
+            <div class="card">
+                <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 4px; font-size: 17px; font-weight: 700;">🍋🫐 Blueberry & Lemon Sourdough</h4>
+                <p style="color: #2563eb; font-size: 12px; font-weight: 600; margin-bottom: 10px;">FAVORITE FLAVORED LOAF</p>
+                <p style="color: #475569; font-size: 13px; line-height: 1.5; margin-bottom: 15px;">
+                    A bright, fruit-infused artisanal loaf featuring fresh lemon zest incorporated into the dough and juicy blueberries layered during lamination.
+                </p>
+                <p style="color: #0f172a; font-weight: 700; font-size: 14px; margin-bottom: 8px;">Baker's Add-ins</p>
+                <ul style="color: #334155; font-size: 13px; line-height: 1.6; padding-left: 18px; margin-bottom: 15px;">
+                    <li><b>Base:</b> Classic sourdough dough recipe</li>
+                    <li><b>Fresh Lemon Zest:</b> Zest of 1–2 organic lemons</li>
+                    <li><b>Blueberries:</b> ~100g (lightly dusted in flour)</li>
+                    <li><b>Technique:</b> Folded in during final lamination sets</li>
+                </ul>
+
+                <details>
+                    <summary>📷 View Blueberry Lemon Photos</summary>
+                    <div class="gallery-grid">
+                        <img src="bread3.jpg" alt="Blueberry Lemon 1">
+                        <img src="bread4.jpg" alt="Blueberry Lemon 2">
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">🌿 Ocean & Nature Trails</h3>
+            <p style="color: #2563eb; font-size: 12px; font-weight: 600; margin-bottom: 8px;">COASTAL EXPLORATION</p>
+            <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+                Exploring coastal pathways and nature walks away from computational pipelines.
+            </p>
+            <details>
+                <summary>📷 View Nature Trail Photos</summary>
+                <div class="gallery-grid">
+                    <img src="photo1.jpg" alt="Nature Trail 1">
+                    <img src="photo5.jpg" alt="Nature Trail 2">
+                </div>
+            </details>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #0f172a; margin-top: 0; font-size: 19px; font-weight: 700;">🌅 Sunsets & Golden Hour</h3>
+            <p style="color: #2563eb; font-size: 12px; font-weight: 600; margin-bottom: 8px;">EVENING LIGHT PHOTOGRAPHY</p>
+            <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+                Capturing golden-hour hues and vibrant evening horizons.
+            </p>
+            <details>
+                <summary>📷 View Sunset Photos</summary>
+                <div class="gallery-grid">
+                    <img src="photo2.jpg" alt="Sunset 1">
+                    <img src="photo3.jpg" alt="Sunset 2">
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<hr>
+<!-- 11. CONTACT & COLLABORATION SECTION -->
+<div id="contact" class="section-anchor"></div>
+<div style="text-align: center; margin-bottom: 32px;">
+    <h2 class="section-title" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Let's Connect</h2>
+    <p class="section-subtitle" style="color: #64748b; font-size: 15px; max-width: 600px; margin: 0 auto;">
+        Whether you're looking to send a quick message or explore a potential neuroimaging research collaboration, pick the form below that fits best. ✨ 
+    </p>
+</div>
+
+<!-- 2-COLUMN GRID CONTAINER -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; align-items: stretch;">
+
+    <!-- LEFT SIDE: GENERAL CONTACT FORM -->
+    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; height: 100%; box-sizing: border-box;">
+        <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
+            💬 General Message
+        </h3>
+        <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
+            For general inquiries, quick hellos, or technical questions.
+        </p>
+
+        <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
+        <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 16px; flex: 1;">
+            <input type="hidden" name="_subject" value="New General Inquiry from Portfolio">
+
+            <div>
+                <label for="name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Name *</label>
+                <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <div>
+                <label for="email" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Email *</label>
+                <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <div style="display: flex; flex-direction: column; flex: 1;">
+                <label for="message" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Message *</label>
+                <textarea id="message" name="message" required style="width: 100%; flex: 1; min-height: 120px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
+            </div>
+
+            <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; margin-top: 4px;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
+                Send Message 🚀
+            </button>
+        </form>
+    </div>
+
+    <!-- RIGHT SIDE: RESEARCH & INDUSTRY COLLABORATION FORM -->
+    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; height: 100%; box-sizing: border-box;">
+        <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
+            🧠 Research & Industry Collaboration
+        </h3>
+        <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
+            Interested in joint academic research, clinical studies, or tech R&D?
+        </p>
+
+        <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
+        <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 14px; flex: 1; justify-content: space-between;">
+            <input type="hidden" name="_subject" value="New Collaboration Proposal (Academic / Clinical / Tech)">
+
+            <div>
+                <label for="collab_name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Your Full Name & Email *</label>
+                <input type="text" id="collab_name" name="collaborator_contact" placeholder="e.g. Jane Doe (jane@company.com / jane@univ.edu)" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <div>
+                <label for="research_title" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project / Research Title *</label>
+                <input type="text" id="research_title" name="project_title" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <div>
+                <label for="study_goal" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Goal & Scope *</label>
+                <textarea id="study_goal" name="study_goal" rows="2" placeholder="Briefly describe what you aim to achieve or build..." required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
+            </div>
+
+            <div>
+                <label for="data_type" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Data Status & Modality *</label>
+                <select id="data_type" name="data_status" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;">
+                    <option value="" disabled selected>Select data situation...</option>
+                    <option value="Have fMRI / MRI / DTI data">I have existing MRI / DTI / fMRI data</option>
+                    <option value="Clinical Trial Data">Clinical Trial / Medical Study Data</option>
+                    <option value="Proprietary / Industry Dataset">Proprietary / Industry Tech Dataset</option>
+                    <option value="Need public dataset processing">Need to work with public/open online datasets</option>
+                </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <label for="project_type" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project Context *</label>
+                    <select id="project_type" name="project_context" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;">
+                        <option value="Academic Research / Thesis">Academic Research / Thesis</option>
+                        <option value="Clinical Trial / Study">Clinical Trial / Study</option>
+                        <option value="Tech / Industry R&D">Tech / Industry R&D</option>
+                        <option value="Consulting / Contracting">Consulting / Contracting</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="timeline" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project Timeline *</label>
+                    <input type="text" id="timeline" name="timeline" placeholder="e.g. 3 months, Q3 2026" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+                </div>
+            </div>
+
+            <div>
+                <label for="organization_info" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Organization / Institution / University</label>
+                <input type="text" id="organization_info" name="organization" placeholder="e.g. Stanford, Mayo Clinic, or Tech Company Inc." style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <div>
+                <label for="lead_info" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">PI, Lead, or Supervisor Details (if applicable)</label>
+                <input type="text" id="lead_info" name="lead_details" placeholder="e.g. Dr. Smith (PI) or Alex Johnson (Engineering Lead)" style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+            </div>
+
+            <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; margin-top: 6px;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
+                Submit Collaboration Proposal 🔬
+            </button>
+        </form>
+    </div>
+
+</div>
+
+        <!-- FOOTER / END OF PAGE -->
+        <div style="text-align: center; padding: 48px 20px 32px; color: ...">
+            <p style="margin-bottom: 8px;">
+                Thank you for coming so far until the end of the page!
+            </p>
+            <p style="margin: 0; color: #2563eb; font-weight: 600;">
+                See you later! 👋
+            </p>
+        </div>
+
+
+<script>
+    // Anti-Spam Rate Limiter (No location/IP tracking)
+    let clickCount = 0;
+    let lastClickTime = Date.now();
+
+    function handleSafeClick(event, targetUrl) {
+      const now = Date.now();
+      
+      // Reset count if more than 3 seconds have passed
+      if (now - lastClickTime > 3000) {
+        clickCount = 0;
+      }
+
+      clickCount++;
+      lastClickTime = now;
+
+      // Block if clicked more than 5 times rapidly
+      if (clickCount > 5) {
+        event.preventDefault();
+        alert("Action temporarily paused to prevent automated spam. Please wait a few seconds.");
+        return false;
+      }
+
+      // Normal navigation
+      if (targetUrl) {
+        if (targetUrl.startsWith('mailto:')) {
+          window.location.href = targetUrl;
+        } else {
+          window.open(targetUrl, '_blank');
+        }
+      }
+    }
+
+    // Smooth scroll to contact form
+    function scrollToContact() {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const nameInput = document.getElementById('name');
+          if (nameInput) nameInput.focus();
+        }, 500);
+      }
+    }
+</script>
+
+</body>
+</html>
