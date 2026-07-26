@@ -295,8 +295,10 @@
                 grid-template-columns: 1fr;
             }
             .top-nav {
-                gap: 12px;
-                padding: 10px 20px;
+                position: static !important; /* Makes it scroll away naturally */
+                gap: 10px;
+                padding: 12px;
+                font-size: 13px;
             }
         }
     </style>
@@ -690,56 +692,42 @@
 <hr>
 <!-- 11. CONTACT SECTION -->
 <div id="contact" class="section-anchor"></div>
-<div style="text-align: center; margin-bottom: 32px;">
-    <h2 class="section-title" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Let's Connect</h2>
-    <p class="section-subtitle" style="color: #64748b; font-size: 15px; max-width: 600px; margin: 0 auto;">
-        Have a question, a research idea, or a project collaboration in mind? Drop me a message below! ✨
-    </p>
+<div style="text-align: center; margin-bottom: 24px;">
+    <h2 class="section-title" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 0;">Contact</h2>
 </div>
 
-<!-- SINGLE CENTERED FORM CARD -->
-<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); max-width: 580px; margin: 0 auto; box-sizing: border-box;">
-    <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
-        💬 Send a Message
-    </h3>
-    <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
-        Fill out the form below and I'll get back to you as soon as possible.
-    </p>
-
+<!-- SINGLE CENTERED CARD -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); max-width: 550px; margin: 0 auto; box-sizing: border-box;">
     <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
     <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
         <input type="hidden" name="_subject" value="New Inquiry from Portfolio">
 
         <div>
-            <label for="name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Name *</label>
+            <label for="name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Name *</label>
             <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
         </div>
 
         <div>
-            <label for="email" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Email *</label>
+            <label for="email" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Email *</label>
             <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
         </div>
 
         <div>
-            <label for="message" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Message *</label>
-            <textarea id="message" name="message" required rows="4" placeholder="Tell me about your inquiry, research proposal, or project..." style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
+            <label for="message" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Message *</label>
+            <textarea id="message" name="message" required rows="5" style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
         </div>
 
         <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
-            Send Message 🚀
+            Send Message
         </button>
     </form>
 </div>
-
-        <!-- FOOTER / END OF PAGE -->
-        <div style="text-align: center; padding: 48px 20px 32px; color: ...">
-            <p style="margin-bottom: 8px;">
-                Thank you for coming so far until the end of the page!
-            </p>
-            <p style="margin: 0; color: #2563eb; font-weight: 600;">
-                See you later! 👋
-            </p>
-        </div>
+<!-- FOOTER / END OF PAGE -->
+<div style="text-align: center; padding: 48px 20px 32px; color: #64748b; font-size: 15px; font-weight: 500;">
+    <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 16px;">
+        See you later! 👋
+    </p>
+</div>
 
 
 <script>
