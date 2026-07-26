@@ -688,123 +688,47 @@
 </body>
 </html>
 <hr>
-<!-- 11. CONTACT & COLLABORATION SECTION -->
+<!-- 11. CONTACT SECTION -->
 <div id="contact" class="section-anchor"></div>
 <div style="text-align: center; margin-bottom: 32px;">
     <h2 class="section-title" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Let's Connect</h2>
     <p class="section-subtitle" style="color: #64748b; font-size: 15px; max-width: 600px; margin: 0 auto;">
-        Whether you're looking to send a quick message or explore a potential neuroimaging research collaboration, pick the form below that fits best. ✨ 
+        Have a question, a research idea, or a project collaboration in mind? Drop me a message below! ✨
     </p>
 </div>
 
-<!-- 2-COLUMN GRID CONTAINER -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; align-items: stretch;">
+<!-- SINGLE CENTERED FORM CARD -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); max-width: 580px; margin: 0 auto; box-sizing: border-box;">
+    <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
+        💬 Send a Message
+    </h3>
+    <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
+        Fill out the form below and I'll get back to you as soon as possible.
+    </p>
 
-    <!-- LEFT SIDE: GENERAL CONTACT FORM -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; height: 100%; box-sizing: border-box;">
-        <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
-            💬 General Message
-        </h3>
-        <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
-            For general inquiries, quick hellos, or technical questions.
-        </p>
+    <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
+    <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+        <input type="hidden" name="_subject" value="New Inquiry from Portfolio">
 
-        <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
-        <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 16px; flex: 1;">
-            <input type="hidden" name="_subject" value="New General Inquiry from Portfolio">
+        <div>
+            <label for="name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Name *</label>
+            <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+        </div>
 
-            <div>
-                <label for="name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Name *</label>
-                <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
+        <div>
+            <label for="email" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Email *</label>
+            <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
+        </div>
 
-            <div>
-                <label for="email" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Email *</label>
-                <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
+        <div>
+            <label for="message" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px; text-align: left;">Your Message *</label>
+            <textarea id="message" name="message" required rows="4" placeholder="Tell me about your inquiry, research proposal, or project..." style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
+        </div>
 
-            <div style="display: flex; flex-direction: column; flex: 1;">
-                <label for="message" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 6px;">Your Message *</label>
-                <textarea id="message" name="message" required style="width: 100%; flex: 1; min-height: 120px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 14px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
-            </div>
-
-            <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; margin-top: 4px;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
-                Send Message 🚀
-            </button>
-        </form>
-    </div>
-
-    <!-- RIGHT SIDE: RESEARCH & INDUSTRY COLLABORATION FORM -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; height: 100%; box-sizing: border-box;">
-        <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 700; margin-bottom: 6px;">
-            🧠 Research & Industry Collaboration
-        </h3>
-        <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">
-            Interested in joint academic research, clinical studies, or tech R&D?
-        </p>
-
-        <!-- REPLACE 'your_formspree_id' WITH YOUR ACTUAL FORMSPREE ENDPOINT -->
-        <form action="https://formspree.io/f/your_formspree_id" method="POST" style="display: flex; flex-direction: column; gap: 14px; flex: 1; justify-content: space-between;">
-            <input type="hidden" name="_subject" value="New Collaboration Proposal (Academic / Clinical / Tech)">
-
-            <div>
-                <label for="collab_name" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Your Full Name & Email *</label>
-                <input type="text" id="collab_name" name="collaborator_contact" placeholder="e.g. Jane Doe (jane@company.com / jane@univ.edu)" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
-
-            <div>
-                <label for="research_title" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project / Research Title *</label>
-                <input type="text" id="research_title" name="project_title" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
-
-            <div>
-                <label for="study_goal" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Goal & Scope *</label>
-                <textarea id="study_goal" name="study_goal" rows="2" placeholder="Briefly describe what you aim to achieve or build..." required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none; resize: vertical;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
-            </div>
-
-            <div>
-                <label for="data_type" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Data Status & Modality *</label>
-                <select id="data_type" name="data_status" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;">
-                    <option value="" disabled selected>Select data situation...</option>
-                    <option value="Have fMRI / MRI / DTI data">I have existing MRI / DTI / fMRI data</option>
-                    <option value="Clinical Trial Data">Clinical Trial / Medical Study Data</option>
-                    <option value="Proprietary / Industry Dataset">Proprietary / Industry Tech Dataset</option>
-                    <option value="Need public dataset processing">Need to work with public/open online datasets</option>
-                </select>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <div>
-                    <label for="project_type" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project Context *</label>
-                    <select id="project_type" name="project_context" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;">
-                        <option value="Academic Research / Thesis">Academic Research / Thesis</option>
-                        <option value="Clinical Trial / Study">Clinical Trial / Study</option>
-                        <option value="Tech / Industry R&D">Tech / Industry R&D</option>
-                        <option value="Consulting / Contracting">Consulting / Contracting</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="timeline" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Project Timeline *</label>
-                    <input type="text" id="timeline" name="timeline" placeholder="e.g. 3 months, Q3 2026" required style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-                </div>
-            </div>
-
-            <div>
-                <label for="organization_info" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">Organization / Institution / University</label>
-                <input type="text" id="organization_info" name="organization" placeholder="e.g. Stanford, Mayo Clinic, or Tech Company Inc." style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
-
-            <div>
-                <label for="lead_info" style="display: block; font-weight: 600; font-size: 13px; color: #1e293b; margin-bottom: 4px;">PI, Lead, or Supervisor Details (if applicable)</label>
-                <input type="text" id="lead_info" name="lead_details" placeholder="e.g. Dr. Smith (PI) or Alex Johnson (Engineering Lead)" style="width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; font-size: 13px; color: #1e293b; outline: none;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
-            </div>
-
-            <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; margin-top: 6px;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
-                Submit Collaboration Proposal 🔬
-            </button>
-        </form>
-    </div>
-
+        <button type="submit" style="width: 100%; background-color: #2563eb; border: 1px solid #2563eb; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.borderColor='#1d4ed8';" onmouseout="this.style.backgroundColor='#2563eb'; this.style.borderColor='#2563eb';">
+            Send Message 🚀
+        </button>
+    </form>
 </div>
 
         <!-- FOOTER / END OF PAGE -->
